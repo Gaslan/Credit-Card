@@ -1,0 +1,119 @@
+:root{
+    --credit-card-width: 360px;
+    --credit-card-height: 228px;
+    --el-height: 16px;
+
+    --label-color: #e1e3e5;
+    --input-border-color: #e1e3e5;
+}
+
+.creditcard-wrapper{
+    width: 600px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.creditcard{
+    width: var(--credit-card-width);
+    height: var(--credit-card-height);
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    background: #fdfdfd;
+    border: 1px solid #efefef;
+    border-radius: 10px;
+}
+
+
+.creditcard-row{
+    text-align: center;
+    padding: 0px 20px;
+    display: flex;
+}
+
+
+.selection{
+    max-width: 318px;
+    display: inline-flex;
+    position: relative;
+    margin: 0px auto;
+}
+
+.selection::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    border: 1px solid #247dff;
+    background: #408cff55;
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 400ms;
+}
+
+.selection.selected::before{
+    opacity: 1;
+}
+
+.bank-name{
+    width: 50%;
+    height: var(--el-height);
+    background: #f5f5f5;
+    border-radius: 4px;
+    margin: 10px;
+}
+
+.chip{
+    width: 50px;
+    height: 50px;
+    background: #f5f5f5;
+    border-radius: 4px;
+    margin: 10px;
+}
+
+.card-bar{
+    height: var(--el-height);
+    background: #efefef;
+    background: #d3d8df;
+    border-radius: 4px;
+    margin: 10px;
+}
+
+.card-number .card-bar{
+    width: 120px;
+}
+
+.exp-date .card-bar{
+    width: 50px;
+}
+
+.card-holder .card-bar{
+    width: 110px;
+}
+
+.card-holder .card-bar:first-child{
+    width: 80px;
+}
+
+
+
+
+
+.cc-form label{
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--label-color);
+}
+
+.cc-form input{
+    border-color: var(--input-border-color);
+    border-width: 2px;
+    color: #989b9f;
+    font-weight: 700;
+}
